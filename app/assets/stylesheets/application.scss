@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+
+.flash{
+  color: green;
+  margin:33px;
+}
+
+header{
+  background-color: #343A40; /*背景色*/
+  color: #fff; /*文字色*/
+}
+.navber{
+  display: flex;
+  align-items: center; /*中央ぞろえ*/
+  justify-content: space-between; /*最初の要素は左端・最後は右端*/
+  padding: 5px; /*padding余白*/
+}
+.title-logo{
+  color: #fff; /*文字色*/
+  text-decoration: none; /*下線を消去*/
+  font-size: 20px;
+  padding-left: 20px; /*左の隙間*/
+}
+.navber-nav{
+  list-style: none; /*リストの点を消去*/
+  font-weight: bold; /*太字*/
+  justify-content: flex-end; /*子要素を右端に*/
+}
+
+.container,.continer-xl,.container-lg,.container-md,.container-sm {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+header li{
+  text-decoration: none; /*リンクの下線を消去*/
+  display: list-item; /**/
+}
+.icon{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.list-item{
+  padding-right: 15px;
+}
+footer{
+  text-align: center;
+}
+
+.welcome{
+  text-align: left;
+}
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+.col-10{
+  flex: 0 0 83.3%;
+  max-width: 83.3%;
+}
+.about-message{
+  line-height: 1.2;
+  margin: 20px;
+  text-align: center;
+}
+.table{
+  display: table;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+/*
+@media (min-width: 992px).navbar-expanded-lg .navbar-toggler{
+  display: none;
+}*/
