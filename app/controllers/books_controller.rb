@@ -3,15 +3,21 @@ class BooksController < ApplicationController
     @book = Book.new
     #@bookに新しい箱を用意する
     @books = Book.all
+    #@booksに複数データ(全データall)を格納する
+  end
+  def show
+    @book = Book.find(params[:id])
   end
   def create
     @book = Book.new(book_params)
+    @book.user_id = current_user.id
+    #@book.user_idにログインユーザーのIDを入れる
     #@bookに新しい箱を用意する
     @books = Book.all
     if @book.save #bookが正常に保存したら
       flash[:notice] = "Book was successfully created."
       #上記のフラッシュを表示する
-      redirect_to book_path
+      redirect_to book_path(@book.id)
       #book_path(自分が投稿した本の一覧)へリダイレクトさせる
     else
       render :index

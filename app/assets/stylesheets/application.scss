@@ -23,6 +23,10 @@
 header{
   background-color: #343A40; /*背景色*/
   color: #fff; /*文字色*/
+  a:link { color: white; }
+  a:visited { color: white; }
+  a:hover { color: white; }
+  a:active { color: white; }
 }
 .navber{
   display: flex;
@@ -60,6 +64,7 @@ header li{
 }
 .list-item{
   padding-right: 15px;
+
 }
 footer{
   text-align: center;
@@ -81,13 +86,37 @@ footer{
   margin: 20px;
   text-align: center;
 }
+.row{
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
 .table{
   display: table;
   text-indent: initial;
   border-spacing: 2px;
   border-color: gray;
 }
-/*
+.kari-icon{
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+}
+.main-title{
+  margin-top: 25px;
+}
+.icon-small{
+  height: 40px;
+  width: 40px;
+  background-color: orange;
+}
+.errors{
+  color: red;
+}
+.btn{
+  text-align: center;
+}
+/*.social i
 @media (min-width: 992px).navbar-expanded-lg .navbar-toggler{
   display: none;
 }*/

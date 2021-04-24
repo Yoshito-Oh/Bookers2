@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!,except: [:top]
+  #before_action :authenticate_user!,except: [:top]
   #ログイン認証が済んでいないユーザー(autheticate_user!)でトップページ以外の画面にアクセスしても
   #ログイン画面にリダイレクトする
   #before_actionメソッドは「このコントローラが動作する前に実行される」
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
     #ユーザー登録する(sign_up)する際に、ユーザー名(name)のデータ操作を許可する
   end
 

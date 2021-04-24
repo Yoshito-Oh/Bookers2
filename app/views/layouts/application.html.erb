@@ -24,7 +24,7 @@
              <% if user_signed_in? %> <!--ログイン済みですか？-->
               <li class="list-item">
                 <i class="fas fa-home"></i>
-                <%= link_to "Home", user_path(current_user.id), class: 'icon'%>
+                <%= link_to "Home", user_path(current_user.id), class: 'icon' %>
               <!--homeボタンを押したらログインユーザーページへ飛ぶ-->
               </li>
               <li class="list-item">
@@ -57,12 +57,12 @@
               </li>
               <li class="list-item">
                 <i class="fas fa-user-plus"></i>
-               <%= link_to "Sign_in", new_user_registration_path ,class: 'icon' %>
+               <%= link_to "sign up", new_user_registration_path ,class: 'icon' %>
                   <!--サインインを表示して、クリックされたら新規登録画面-->
               </li>
               <li class="list-item">
                 <i class="fas fa-sign-in-alt"></i>
-               <%= link_to "Log_in", new_user_session_path ,class: 'icon' %>
+               <%= link_to "login", new_user_session_path ,class: 'icon' %>
                   <!--ログインを表示し、クリックされたらユーザーセッション画面へ-->
              </li>
             <% end %>
@@ -73,12 +73,12 @@
       </nav>
     </header>
 
+       
     <%= yield %>
-  </body>
-  <footer>
+      <footer>
     <div class="copy-right">
        <p>Copy Right Infratop.inc</p>
     </div>
   </footer>
-
+  </body>
 </html>

@@ -3,9 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  attachment :profile_image
   has_many :books, dependent: :destroy
   #booksと関連付けて、「User」が消えたら「books」も消える
 
-  attachment :image
+  validates :name, presence: true, length: {minimum: 2, maximum: 20}
+  validates :introduction, presence: true, length:{maximum: 50}
+
 end
