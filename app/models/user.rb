@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -7,7 +8,7 @@ class User < ApplicationRecord
   has_many :books, dependent: :destroy
   #booksと関連付けて、「User」が消えたら「books」も消える
 
-  validates :name, presence: true, length: {minimum: 2, maximum: 20}
-  validates :introduction, presence: true, length:{maximum: 50}
+  validates :name, presence: true, length: {minimum: 2, maximum: 20}, uniqueness: true
+  validates :introduction, length:{maximum: 50}
 
 end

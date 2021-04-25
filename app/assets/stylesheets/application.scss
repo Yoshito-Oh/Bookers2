@@ -105,16 +105,21 @@ footer{
 .main-title{
   margin-top: 25px;
 }
-.icon-small{
-  height: 40px;
-  width: 40px;
-  background-color: orange;
-}
 .errors{
   color: red;
 }
 .btn{
   text-align: center;
+}
+.text-box{
+  width: 100%;
+  border: 1px solid ;
+  border-color: #CED4DA;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.flash-message{
+  color: green;
 }
 /*.social i
 @media (min-width: 992px).navbar-expanded-lg .navbar-toggler{

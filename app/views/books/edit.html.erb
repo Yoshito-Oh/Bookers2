@@ -5,23 +5,24 @@
         <div class="edit-title">
         <h1>Editing Book</h1>
       </div>
-       <div class="Editbook">
-       <% if @book.errors.any? %>
-       <div class="errors">
-        <h4 class="error-title">2 errors prohibited this book form being saved:</h4>
-        <ul>
-         <% @book.errors.full_messages.each do |message| %>
-         <li><%= message %></li>
-         <% end %>
-        </ul>
-       </div>
-      <% end %>
-      <div class="from-group">
-        
+         <div class="Editbook">
+           <% if @book.errors.any? %>
+           <div class="errors">
+            <h4 class="error-title">2 errors prohibited this book form being saved:</h4>
+            <ul>
+             <% @book.errors.full_messages.each do |message| %>
+             <li><%= message %></li>
+             <% end %>
+            </ul>
+           </div>
+          <% end %>
       </div>
+      
+        
+      
       <%= form_with model:@book, local: true do |f|%>
-       <p>Title<br /><%= f.text_field :title %></p>
-       <p>Body<br /><%= f.text_area :body %></p>
+       <p>Title<br /><%= f.text_field :title, class: "text-box" %></p>
+       <p>Body<br /><%= f.text_area :body, class: "text-box" %></p>
        <br />
        <input type="submit" name="commit" value="Update Book" class="btn btn-success" data-disable-with="Updata Book"></input>
        <br />
